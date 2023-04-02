@@ -12,7 +12,7 @@ const filtersReducer = (state = initialState, action) => {
         case COLORCHANGED:
             const { color, changeType } = action.payload;
             switch (changeType) {
-                case 'added':
+                case 'add':
                     return {
                         ...state,
                         colors: [
@@ -20,7 +20,7 @@ const filtersReducer = (state = initialState, action) => {
                             color
                         ]
                     }
-                case 'removed':
+                case 'remove':
                     return {
                         ...state,
                         colors: state.colors.filter(existingColor => existingColor !== color)

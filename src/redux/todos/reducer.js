@@ -12,7 +12,9 @@ export const todosReducer = (state = initialState, action) => {
             return [
                 ...state,
                 {
-                    id: nextTodoId(state)
+                    id: nextTodoId(state),
+                    title: action.payload,
+                    completed: false,
                 }
             ];
 
